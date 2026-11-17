@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM postings WHERE scraped_at < ? AND status NOT IN ('saved', 'applied')",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "a14339209591966e4918630bd77ac397954c3d96dfbe10ca496a3aa73b1242b0"
+}

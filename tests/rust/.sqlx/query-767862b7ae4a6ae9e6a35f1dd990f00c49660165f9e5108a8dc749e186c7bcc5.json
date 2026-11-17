@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            UPDATE cv_profiles SET\n                name = ?, data = ?, template = ?, theme = ?, is_default = ?, updated_at = ?\n            WHERE id = ?\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "767862b7ae4a6ae9e6a35f1dd990f00c49660165f9e5108a8dc749e186c7bcc5"
+}

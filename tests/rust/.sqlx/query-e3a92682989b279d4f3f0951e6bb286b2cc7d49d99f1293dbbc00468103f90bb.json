@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            INSERT INTO scan_logs (id, source_id, status, postings_found, postings_new, postings_updated, error_message, started_at, completed_at, duration_ms, raw_response_sample)\n            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 11
+    },
+    "nullable": []
+  },
+  "hash": "e3a92682989b279d4f3f0951e6bb286b2cc7d49d99f1293dbbc00468103f90bb"
+}

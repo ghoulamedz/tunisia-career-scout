@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM scan_logs WHERE started_at < ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "3a4fdeb9631b4db254836402f9f17df0ca33ba9156842387cfe4feb96abb5c95"
+}

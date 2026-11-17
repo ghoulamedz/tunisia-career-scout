@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            INSERT INTO match_results (\n                id, cv_profile_id, posting_id, score, matched_skills, missing_skills,\n                reasons, tfidf_score, llm_score, created_at\n            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\n            ON CONFLICT(cv_profile_id, posting_id) DO UPDATE SET\n                score = excluded.score,\n                matched_skills = excluded.matched_skills,\n                missing_skills = excluded.missing_skills,\n                reasons = excluded.reasons,\n                tfidf_score = excluded.tfidf_score,\n                llm_score = excluded.llm_score\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "7720115d1eb91d17b8658cbe6862ea4aa29a06e2dc3ac3787c67fe656cfffcfe"
+}

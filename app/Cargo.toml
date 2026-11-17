@@ -1,0 +1,112 @@
+[package]
+name = "tunisia-career-scout"
+version = "0.1.0"
+edition = "2021"
+description = "Universal job scouting + CV engine + matching (Rust + Svelte + Tauri)"
+license = "MIT"
+
+[workspace]
+members = []
+
+[dependencies]
+# Tauri
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-store = "2"
+tauri-plugin-sql = "2"
+tauri-plugin-http = "2"
+tauri-plugin-process = "2"
+tauri-plugin-updater = "2"
+
+# Async & Runtime
+tokio = { version = "1", features = ["full", "macros"] }
+tokio-cron-scheduler = "0.11"
+
+# Database (SQLite via SQLx)
+sqlx = { version = "0.8", features = ["runtime-tokio-rustls", "sqlite", "uuid", "chrono", "json", "migrate"] }
+sqlx-type-macro = "0.4"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_with = "3"
+indexmap = "2"
+
+# UUID & Time
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# HTTP & Scraping
+reqwest = { version = "0.12", features = ["json", "rustls-tls", "cookies", "gzip", "brotli"] }
+scraper = "0.20"
+selectors = "0.24"  # CSS selectors for HTML parsing
+rss = "2.0"        # RSS/Atom parsing
+feed-rs = "1.0"    # Alternative RSS parser
+async-trait = "0.1"
+url = "2.5"
+
+# LLM
+llm-chain = "0.13"
+llm-chain-openai = "0.13"
+llm-chain-mock = "0.13"
+async-openai = "0.16"  # Must match llm-chain-openai's dependency
+# llm-chain-llama = "0.13"  # Requires llama.cpp build tools
+
+# OAuth & Gmail
+oauth2 = "5"
+google-gmail1 = "6"
+secrecy = "0.10"
+keyring = { version = "4", features = ["zbus-secret-service-keyring-store", "default"] }
+
+# PDF Generation (Typst)
+typst = "0.15"
+typst-pdf = "0.15"
+typst-utils = "0.15"
+
+# Background Jobs / Scheduling
+cron = "0.10"
+
+# Utilities
+anyhow = "1"
+thiserror = "1"
+once_cell = "1.19"
+robotstxt = "0.3"  # robots.txt parsing and compliance
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+config = "0.14"
+toml = "0.8"
+directories = { version = "5", features = [] }
+base64 = { version = "0.22", features = ["std"] }
+aes-gcm = "0.10"
+rand = "0.9"
+md5 = "0.7"  # For content hashing in scrapers
+regex = "1.10"  # For skill pattern matching
+
+# JNI for Android
+jni = { version = "0.21", features = [] }
+
+[target.'cfg(target_os = "android")'.dependencies]
+jni = { version = "0.21", features = [] }
+ndk-glue = "0.7"
+
+
+
+[dev-dependencies]
+wiremock = "0.6"
+tokio-test = "0.4"
+
+[build-dependencies]
+# tauri-build = { version = "2", features = [] }
+directories = { version = "5", features = [] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.dev]
+debug = true

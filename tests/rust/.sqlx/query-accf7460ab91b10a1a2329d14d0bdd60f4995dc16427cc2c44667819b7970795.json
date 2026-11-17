@@ -1,0 +1,80 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT * FROM scan_logs WHERE source_id = ? ORDER BY started_at DESC LIMIT ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text"
+      },
+      {
+        "name": "source_id",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "status",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "postings_found",
+        "ordinal": 3,
+        "type_info": "Integer"
+      },
+      {
+        "name": "postings_new",
+        "ordinal": 4,
+        "type_info": "Integer"
+      },
+      {
+        "name": "postings_updated",
+        "ordinal": 5,
+        "type_info": "Integer"
+      },
+      {
+        "name": "error_message",
+        "ordinal": 6,
+        "type_info": "Text"
+      },
+      {
+        "name": "started_at",
+        "ordinal": 7,
+        "type_info": "Text"
+      },
+      {
+        "name": "completed_at",
+        "ordinal": 8,
+        "type_info": "Text"
+      },
+      {
+        "name": "duration_ms",
+        "ordinal": 9,
+        "type_info": "Integer"
+      },
+      {
+        "name": "raw_response_sample",
+        "ordinal": 10,
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "accf7460ab91b10a1a2329d14d0bdd60f4995dc16427cc2c44667819b7970795"
+}
