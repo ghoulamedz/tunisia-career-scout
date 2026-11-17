@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "\n                SELECT id, name, source_type, config, schedule, enabled, status, auth_data, last_scan_at, last_error, created_at, updated_at\n                FROM sources WHERE enabled = 1 ORDER BY created_at DESC\n                ",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text"
+      },
+      {
+        "name": "name",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "source_type",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "config",
+        "ordinal": 3,
+        "type_info": "Text"
+      },
+      {
+        "name": "schedule",
+        "ordinal": 4,
+        "type_info": "Text"
+      },
+      {
+        "name": "enabled",
+        "ordinal": 5,
+        "type_info": "Integer"
+      },
+      {
+        "name": "status",
+        "ordinal": 6,
+        "type_info": "Text"
+      },
+      {
+        "name": "auth_data",
+        "ordinal": 7,
+        "type_info": "Text"
+      },
+      {
+        "name": "last_scan_at",
+        "ordinal": 8,
+        "type_info": "Text"
+      },
+      {
+        "name": "last_error",
+        "ordinal": 9,
+        "type_info": "Text"
+      },
+      {
+        "name": "created_at",
+        "ordinal": 10,
+        "type_info": "Text"
+      },
+      {
+        "name": "updated_at",
+        "ordinal": 11,
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "7b75f22aa61de5fca78f7bc77f0529c7fc3666b291c7f10ada26f54180fd61cf"
+}

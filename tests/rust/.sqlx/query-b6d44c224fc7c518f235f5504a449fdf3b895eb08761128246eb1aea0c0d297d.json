@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            UPDATE postings SET\n                title = ?, company = ?, description = ?, summary = ?,\n                skills = ?, experience_required = ?, education_required = ?,\n                languages = ?, location = ?, remote_policy = ?, job_type = ?,\n                salary_range = ?, deadline = ?, application_steps = ?,\n                application_email = ?, application_url = ?, contact_person = ?,\n                contact_phone = ?, posted_date = ?, content_hash = ?,\n                raw_html = ?, status = ?, updated_at = ?\n            WHERE id = ?\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 24
+    },
+    "nullable": []
+  },
+  "hash": "b6d44c224fc7c518f235f5504a449fdf3b895eb08761128246eb1aea0c0d297d"
+}

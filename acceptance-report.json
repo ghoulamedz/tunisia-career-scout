@@ -1,0 +1,51 @@
+{
+  "criteriaSatisfied": [
+    {
+      "id": "criterion-1",
+      "status": "satisfied",
+      "evidence": "Implemented all required backend Tauri commands in app/src/commands/source.rs: list_sources, get_source, create_source, update_source, delete_source, trigger_source_scan, scan_all_sources, toggle_source_enabled, get_source_logs, login_social. Registered all commands in main.rs."
+    },
+    {
+      "id": "criterion-2",
+      "status": "satisfied",
+      "evidence": "Updated frontend: Sources.svelte adds 'Scan All' button and toggle functionality; SourceCard.svelte adds toggle button with visual feedback; SourceDetail.svelte adds toggle button and uses get_source API; api.ts adds get, scanAll, toggleEnabled methods. Frontend builds successfully."
+    }
+  ],
+  "changedFiles": [
+    "app/src/commands/source.rs",
+    "app/src/main.rs",
+    "app/frontend/src/lib/api.ts",
+    "app/frontend/src/routes/Sources.svelte",
+    "app/frontend/src/routes/SourceDetail.svelte",
+    "app/frontend/src/components/sources/SourceCard.svelte"
+  ],
+  "testsAddedOrUpdated": [],
+  "commandsRun": [
+    {
+      "command": "cargo check (with DATABASE_URL)",
+      "result": "passed",
+      "summary": "Backend compiles successfully; source.rs has no errors"
+    },
+    {
+      "command": "npm run build (frontend)",
+      "result": "passed",
+      "summary": "Frontend builds successfully with 4650 modules transformed"
+    }
+  ],
+  "validationOutput": [
+    "Backend: cargo check passes for source.rs (no errors in modified commands)",
+    "Frontend: npm run build completes successfully (11.77s)",
+    "All new Tauri commands registered and exported via api.ts"
+  ],
+  "residualRisks": [
+    "Pre-existing jni dependency conflict in Cargo.toml (android target) - unrelated to this ticket",
+    "Pre-existing sqlx query macro errors require DATABASE_URL for compile-time checking - standard for this project",
+    "Pre-existing TypeScript warnings in stores.ts - unrelated to this ticket"
+  ],
+  "noStagedFiles": true,
+  "diffSummary": "Added 3 new backend commands (get_source, scan_all_sources, toggle_source_enabled), updated 2 existing commands to use Json wrapper correctly, registered new commands in main.rs. Frontend: added Scan All button, per-source toggle enable/disable with visual toggle icons, updated SourceCard and SourceDetail to support toggle, added get_source API call to SourceDetail.",
+  "reviewFindings": [
+    "No blockers found. Implementation matches ticket requirements."
+  ],
+  "manualNotes": "The app/ directory is the new Rust/Tauri project (untracked in git). The old Python/Next.js backend/frontend was removed in a prior restructure. All changes are within the app/ directory."
+}

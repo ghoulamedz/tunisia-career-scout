@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tunisia Career Scout</string>
+    <string name="notification_channel_name">Background Scanning</string>
+    <string name="notification_channel_description">Monitors job sources for new postings in the background</string>
+    <string name="notification_title">Scanning for Jobs</string>
+    <string name="notification_text">Checking for new job postings...</string>
+    <string name="notification_scanning">Scanning %1$s</string>
+    <string name="notification_idle">Waiting for next scheduled scan</string>
+</resources>

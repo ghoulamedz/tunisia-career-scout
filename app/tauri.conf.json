@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Tunisia Career Scout",
+  "version": "0.1.0",
+  "identifier": "com.tunisiacareerscout.app",
+  "build": {
+    "beforeDevCommand": "cd ../frontend && npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "cd ../frontend && npm run build",
+    "frontendDist": "../frontend/dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Tunisia Career Scout",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "android": {
+      "minSdkVersion": 24,
+      "versionCode": 1
+    }
+  },
+  "plugins": {
+    "fs": {
+      "scope": {
+        "allowed": [
+          "$APPDATA/*",
+          "$DOCUMENT/*",
+          "$DOWNLOAD/*"
+        ]
+      }
+    },
+    "shell": {
+      "allowlist": [
+        { "name": "python3", "cmd": "python3", "args": true },
+        { "name": "python", "cmd": "python", "args": true }
+      ]
+    },
+    "notification": {
+      "allowlist": ["*"]
+    },
+    "sql": {
+      "allowlist": ["*"]
+    },
+    "http": {
+      "allowlist": [
+        { "url": "https://*", "method": ["GET", "POST", "PUT", "DELETE", "PATCH"] },
+        { "url": "http://localhost:*", "method": ["GET", "POST", "PUT", "DELETE", "PATCH"] }
+      ]
+    }
+  }
+}

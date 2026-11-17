@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            INSERT INTO postings (\n                id, source_id, source_posting_id, title, company, description, summary,\n                skills, experience_required, education_required, languages, location,\n                remote_policy, job_type, salary_range, deadline, application_steps,\n                application_email, application_url, contact_person, contact_phone,\n                posted_date, scraped_at, content_hash, raw_html, status, created_at, updated_at\n            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 28
+    },
+    "nullable": []
+  },
+  "hash": "805f7f02ab0970647a83b0064e1ed0e97bd52d1846ec544d654c0444cc6b29c6"
+}

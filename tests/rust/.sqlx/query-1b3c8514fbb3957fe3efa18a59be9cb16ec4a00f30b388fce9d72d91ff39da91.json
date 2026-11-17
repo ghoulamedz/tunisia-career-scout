@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM match_results WHERE created_at < ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "1b3c8514fbb3957fe3efa18a59be9cb16ec4a00f30b388fce9d72d91ff39da91"
+}

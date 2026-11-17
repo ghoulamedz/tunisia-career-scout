@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM match_results WHERE cv_profile_id = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "73daa6a9516e076ad447a39b06558de2ca48b9ba936235e7972ee5c7a915b14d"
+}

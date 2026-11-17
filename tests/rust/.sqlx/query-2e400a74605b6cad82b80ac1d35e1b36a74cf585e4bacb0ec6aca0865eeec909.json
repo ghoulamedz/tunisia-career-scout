@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT * FROM cv_profiles ORDER BY is_default DESC, updated_at DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text"
+      },
+      {
+        "name": "name",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "data",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "template",
+        "ordinal": 3,
+        "type_info": "Text"
+      },
+      {
+        "name": "theme",
+        "ordinal": 4,
+        "type_info": "Text"
+      },
+      {
+        "name": "is_default",
+        "ordinal": 5,
+        "type_info": "Integer"
+      },
+      {
+        "name": "created_at",
+        "ordinal": 6,
+        "type_info": "Text"
+      },
+      {
+        "name": "updated_at",
+        "ordinal": 7,
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "2e400a74605b6cad82b80ac1d35e1b36a74cf585e4bacb0ec6aca0865eeec909"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            UPDATE scan_logs SET\n                status = ?, postings_found = ?, postings_new = ?, postings_updated = ?,\n                error_message = ?, completed_at = ?, duration_ms = ?, raw_response_sample = ?\n            WHERE id = ?\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 9
+    },
+    "nullable": []
+  },
+  "hash": "e51f70b9ae8835c88108e2056fdc968ac2710752e26cf78ddf1a7411d0056929"
+}

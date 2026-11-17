@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notification-channels xmlns:android="http://schemas.android.com/apk/res/android">
+    <channel
+        android:id="scan_channel"
+        android:name="@string/notification_channel_name"
+        android:description="@string/notification_channel_description"
+        android:importance="low"
+        android:enableVibration="false"
+        android:showBadge="false"
+        android:lockscreenVisibility="secret" />
+</notification-channels>

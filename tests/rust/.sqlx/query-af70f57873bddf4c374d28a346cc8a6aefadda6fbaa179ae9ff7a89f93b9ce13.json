@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            INSERT INTO match_results (\n                id, cv_profile_id, posting_id, score, matched_skills, missing_skills,\n                reasons, tfidf_score, llm_score, created_at\n            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "af70f57873bddf4c374d28a346cc8a6aefadda6fbaa179ae9ff7a89f93b9ce13"
+}
